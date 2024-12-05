@@ -20,12 +20,18 @@ sourceElement.src = randomVideo;
 videoElement.load();
 
 // change text on hover
+document.addEventListener("DOMContentLoaded", function() {
     const homepageTitle = document.getElementById("homepageTitle");
 
-    homepageTitle.addEventListener('mouseenter', () => { 
-        homepageTitle.innerHTML = "Home"
-    )};
+    if (homepageTitle) {
+        homepageTitle.addEventListener('mouseenter', function() {
+            homepageTitle.textContent = "Home";
+        });
 
-    homepageTitle.addEventListener('mouseleave', () => {
-        homepageTitle.innerHTML = "NJT Designs"
-    )};
+        homepageTitle.addEventListener('mouseleave', function() {
+            homepageTitle.textContent = "NJT Designs";
+        });
+    } else {
+        console.error("Element with ID 'homepageTitle' not found.");
+    }
+});
