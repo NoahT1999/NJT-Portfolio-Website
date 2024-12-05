@@ -1,0 +1,156 @@
+/*styles for the entire body to keep consistancy*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+/* css styles for the video in the homepage */
+#bgvid {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(3px);
+}
+/*the overlay for the video to give it a tinted effect*/
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+/*the header banner for the homepage title*/
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.homeButton {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    max-height: 10vh;
+}
+
+/*the title font for the homepage*/
+#homepageTitle {
+    font-size: 2em;
+    font-style: bold;
+    margin: 0;
+    color: white;
+}
+
+/*the flex container that contains the homepages squares*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-top: 15vh;
+    padding: 20px;
+    gap: 15px;
+    flex-direction: column;
+}
+/*styles for the a link around the menu div boxes*/
+.homepageLinks {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+/*buttons/navigation squares on the home page*/
+.homepageMenu {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: rgba(106, 0, 255, .8);
+    border: 2px solid;
+    border-radius: 5%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+/*styles for the videos in the menu squares*/
+.squareVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    filter: blur(1px);
+}
+/*hover text*/
+.showOnHover {
+    position: absolute;
+    opacity: 0;
+}
+/*style to show video when hovered over*/
+.homepageMenu:hover .squareVideo {
+    opacity: 1;
+}
+/*hide square text*/
+.homepageMenu:hover h2{
+    opacity: 0;
+}
+.homepageMenu:hover .showOnHover{
+    opacity: 1;
+}
+
+/* Hover effect on the homepageMenu container */
+.homepageLinks:hover .homepageMenu {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+/*404 page stylings*/
+.errorContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* The error title style */
+.errorTitle {
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/*places where the responsiveness goes. Once the browser goes over 768px wide the .container will change*/
+@media (min-width: 768px) {
+    .container {
+        margin-top: 20vh;
+        gap: 20px;
+        flex-direction: row;
+    }
+}
