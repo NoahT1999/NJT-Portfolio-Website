@@ -20,7 +20,6 @@ sourceElement.src = randomVideo;
 videoElement.load();
 
 // change text on hover
-document.addEventListener("DOMContentLoaded", function() {
     const homepageTitle = document.getElementById("homepageTitle");
 
     homepageTitle.addEventListener('mouseenter', () => { 
@@ -30,4 +29,3 @@ document.addEventListener("DOMContentLoaded", function() {
     homepageTitle.addEventListener('mouseleave', () => {
         homepageTitle.innerHTML = "NJT Designs"
     )};
-});
