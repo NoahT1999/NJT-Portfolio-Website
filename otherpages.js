@@ -23,11 +23,11 @@ videoElement.load();
 document.addEventListener("DOMContentLoaded", function() {
     const homepageTitle = document.getElementById("homepageTitle");
 
-    homepageTitle.addEventListener("onmouseover", function() {
-        homepageTitle.textContent = "Home";
-    });
+    homepageTitle.onmouseover = function () {
+        homepageTitle.innerHTML = "Home"
+    };
 
-    homepageTitle.addEventListener("onmouseout", function() {
-        homepageTitle.textContent = "NJT Designs";
-    });
+    homepageTitle.onmouseout = function () {
+        homepageTitle.innerHTML = "NJT Designs"
+    };
 });
