@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Sign Up</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+   <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+   <video playsinline autoplay muted loop id="bgvid">
+      <source id="videoSource" src="" type="video/mp4">
+   </video>
+   <div class="overlay"></div>
+   <header>
+      <a href="index.html" alt="Home page" class="homeButton">
+         <h1 id="homepageTitle">NJT Designs</h1>
+      </a>
+   </header>
+   <div class="pageContainer">
+      <h1 class="pageContainerTitle">Sign Up</h1>
+      <form action="#" method="post" id="signup-form">
+         <div class="field">
+            <label for="su-name">Full Name</label>
+            <input id="su-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+         </div>
+
+         <div class="field">
+            <label for="su-email">Email</label>
+            <input id="su-email" name="email" type="email" placeholder="you@example.com" autocomplete="email"
+               required />
+         </div>
+
+         <div class="field">
+            <label for="su-password">Password</label>
+            <input id="su-password" name="password" type="password" placeholder="Create a password"
+               autocomplete="new-password" minlength="8" required />
+         </div>
+
+         <div class="field">
+            <label for="su-password2">Confirm Password</label>
+            <input id="su-password2" name="password_confirm" type="password" placeholder="Repeat your password"
+               autocomplete="new-password" minlength="8" required />
+         </div>
+
+         <div class="field checkbox">
+            <label>
+               <input type="checkbox" name="agree" required />
+               I agree to the <a href="/TermsAndConditions.html" target="_blank" rel="noopener">Terms</a> and
+               have read the <a href="/PrivacyPolicy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+            </label>
+         </div>
+
+         <button type="submit">Sign Up</button>
+      </form>
+   </div>
+   <div class="footer">
+      <a href="TermsAndConditions.html" class="homepageLinks">
+         <h3 class="footerText">Terms and Conditions</h3>
+      </a>
+      <a href="PrivacyPolicy.html" class="homepageLinks">
+         <h3 class="footerText">Privacy Policy</h3>
+      </a>
+      <a href="CookiePolicy.html" class="homepageLinks">
+         <h3 class="footerText">Cookie Policy</h3>
+      </a>
+   </div>
+   <script src="otherpages.js" defer></script>
+</body>
+
+</html>
